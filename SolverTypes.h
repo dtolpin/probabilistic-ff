@@ -55,6 +55,8 @@ public:
     friend bool operator <  (Lit p, Lit q) { return index(p)  < index(q); }  // '<' guarantees that p, ~p are adjacent in the ordering.
 };
 
+Lit toLit(int i);
+
 const Lit lit_Undef(var_Undef, false);  // }- Useful special constants.
 const Lit lit_Error(var_Undef, true );  // }
 
@@ -92,6 +94,7 @@ public:
     float&    activity    ()      const { return *((float*)&data[size()]); }
 };
 
+Clause* Clause_new(bool learnt, const vec<Lit>& ps);
 
 //=================================================================================================
 // GClause -- Generalize clause:
@@ -114,6 +117,7 @@ public:
 };
 #define GClause_NULL GClause_new((Clause*)NULL)
 
-
+GClause GClause_new(Lit p);
+GClause GClause_new(Clause* c);
 //=================================================================================================
 #endif

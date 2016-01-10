@@ -3,7 +3,7 @@
 #include "parse.h"
 
 /* default yywrap function - always treat EOF as an EOF  */
-#define ops_pddlwrap() 1 
+int ops_pddlwrap() {return 1 ;}
 
 %}
 
