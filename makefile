@@ -12,9 +12,10 @@ ADDONS	=
 CC      = gcc
 CPP      = g++
 
-CFLAGS	= -O6 -Wall -g -ansi
+#CFLAGS	= -O6 -Wall -g -ansi
+CFLAGS	= -O6 -g -ansi
 # -g -pg
-CPPFLAGS = -O6 -Wall -g -ansi -Wno-deprecated
+#CPPFLAGS = -O6 -Wall -g -ansi -Wno-deprecated
 
 
 LIBS    = -lm -L Cachet-1.21-wmc/ -L MiniSat_v1.14/ -lsat
